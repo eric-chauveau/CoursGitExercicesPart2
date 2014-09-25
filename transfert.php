@@ -8,7 +8,7 @@ function transfert ()
 	$img_nom = '';			// nom de l'image à stocker dans la DB
 	$taille_max = 250000;	// taille maximale de l'image transferable
 	
-	// ouvre une interface pour sélectionner le fichier à transferer
+	// vérifie comme s'est passé le transfert du fichier
 	$ret = is_uploaded_file ($_FILES['fic']['tmp_name']);
 	if ( !$ret )
 	{
