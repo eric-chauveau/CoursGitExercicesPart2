@@ -2,11 +2,11 @@
 function transfert ()
 {
 	$ret = false;
-	$img_blob = '';
-	$img_taille = 0;
-	$img_type = '';
-	$img_nom = '';
-	$taille_max = 250000;
+	$img_blob = '';			// tempon de stockage de l'image pour transfert vers la DB
+	$img_taille = 0;		// taille de l'image à stocker dans la DB
+	$img_type = '';			// type d'image à stocker dans la DB
+	$img_nom = '';			// nom de l'image à stocker dans la DB
+	$taille_max = 250000;	// taille maximale de l'image transferable
 	
 	$ret = is_uploaded_file ($_FILES['fic']['tmp_name']);
 	if ( !$ret )
