@@ -25,16 +25,19 @@
 	// pour afficher tous les paramètres de configuration:
 	//phpinfo();
 
+	// recherche l'idendité de l'utilisateur
 	$user = $_POST['user'];
 	if($user == "")
 		$user = $_POST['IdUser'];
 		
+	// si l'utilisateur n'est pas authentifié
 	if($user == ""){
 		 echo "Vous n'êtes pas autorisés à visualiser cette page !";
 		 exit();
 	}
 
-  	$demandeur = $_POST['demandeur'];
+  	// récupération des données de foormulaire
+	$demandeur = $_POST['demandeur'];
 	$dateRetour = $_POST['dateRetour'];
 	$urgent = $_POST['urgent'];
 	$nbPages = $_POST['nbPages'];
